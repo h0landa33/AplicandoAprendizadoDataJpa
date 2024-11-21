@@ -1,0 +1,7 @@
+CREATE TABLE department (
+    id UUID NOT NULL PRIMARY KEY, -- Definição do id como UUID
+    name VARCHAR(20) NOT NULL,    -- Definição do nome com no máximo 20 caracteres
+    CONSTRAINT chk_name CHECK (name IN ('FINANCIAL', 'COMMERCIAL', 'ADMINISTRATIVE', 'IT')), -- Restrição de valor para name
+    description VARCHAR(300) NOT NULL -- Definição da descrição com no máximo 300 caracteres
+);
+
