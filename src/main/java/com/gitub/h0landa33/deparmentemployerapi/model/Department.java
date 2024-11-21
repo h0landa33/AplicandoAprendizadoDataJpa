@@ -5,6 +5,8 @@ import java.util.UUID;
 import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,7 +16,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "derpartment")
+@Table(name = "department")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,6 +30,7 @@ public class Department {
 	
 	
 	@Column(name = "name" , length = 20, nullable = false)
+	@Enumerated(EnumType.STRING)
 	private NameDepartmentEnum name;
 	
 	
