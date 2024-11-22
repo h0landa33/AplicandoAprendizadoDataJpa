@@ -24,12 +24,11 @@ public class DepartmentTest {
 		Department dep1 = new Department();
 		
 		
-		dep1.setName(NameDepartmentEnum.IT);
-		dep1.setDescription("Department responsavel por administrar a infra da TI");
-		
+		dep1.setName(NameDepartmentEnum.ADMINISTRATIVE);
+		dep1.setDescription("Department responsavel por administrar a empresa");		
 			Department salvo = departmentRepository.save(dep1);
-	
 			System.out.println("Departamento salvo \n" + salvo);
+	
 	}
 
 }
