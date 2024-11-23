@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +17,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -39,20 +41,15 @@ public class Employer {
 	private BigDecimal salary;
 	
 	
-	@ManyToOne
+	@ManyToOne()
 	@JoinColumn(name = "id_department")
+	@ToString.Exclude
 	private Department department;
 
 	
-	/*
-	 create table employer (
-	id UUID not null primary key,
-	name varchar(100) not null,
-	salary numeric(18,2) not null,
-	id_department UUID not null references department(id)
 	
-)
 
-	 */
+
+	
 	
 }

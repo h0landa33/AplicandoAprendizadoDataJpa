@@ -25,20 +25,18 @@ public class EmployerTest {
 	
 	
 	@Test
-	void newDepartment() {
+	void newEmployer() {
 		
-		Department department = departmentRepository.findById(UUID.fromString("516bad9a-1f00-42af-88cb-bec0f11d04c1")).orElse(null);
-		
+		Department department = departmentRepository.findById(UUID.fromString("516bad9a-1f00-42af-88cb-bec0f11d04c1")).orElse(null);		
 		Employer emp1 = new Employer();
-		
-		
-		emp1.setName("Samuel Holanda Mendes");
-		emp1.setSalary(BigDecimal.valueOf(3000));
-		emp1.setDepartment(department); 
-		
+		emp1.setName("Roberto Davydson");
+		emp1.setSalary(BigDecimal.valueOf(9000));
+		emp1.setDepartment(department); 		
 		employerRepository.save(emp1);
 
+		System.out.println("Employer save : " + emp1);
+		
 		
 	}
-
+			
 }

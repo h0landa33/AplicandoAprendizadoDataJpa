@@ -5,5 +5,4 @@ public enum NameDepartmentEnum {
 	COMMERCIAL,
 	ADMINISTRATIVE,
 	IT
-
 }

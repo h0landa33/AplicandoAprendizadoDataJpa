@@ -45,8 +45,8 @@ public class Department {
 
 	
 	// É UMA BOA PRATICA SEMPRE UTILIZAR O LAZY
-	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@ToString.Exclude
+
+	@OneToMany(mappedBy = "department",  fetch = FetchType.LAZY)
 	private List<Employer> employerList;
 	
 	

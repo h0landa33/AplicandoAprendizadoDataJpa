@@ -3,5 +3,14 @@ CREATE TABLE department (
     name VARCHAR(20) NOT NULL,    -- Definição do nome com no máximo 20 caracteres
     CONSTRAINT chk_name CHECK (name IN ('FINANCIAL', 'COMMERCIAL', 'ADMINISTRATIVE', 'IT')), -- Restrição de valor para name
     description VARCHAR(300) NOT NULL -- Definição da descrição com no máximo 300 caracteres
-);
+)
 
+
+
+	 create table employer (
+	id UUID not null primary key,
+	name varchar(100) not null,
+	salary numeric(18,2) not null,
+	id_department UUID not null references department(id)
+	
+)
